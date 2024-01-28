@@ -1,0 +1,192 @@
+/* UCID_styles.css */
+
+/* Responsive Design */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D1A69F;
+    color: #C9CAB8;
+}
+
+@media screen and (max-width: 768px) {
+    /* Styles for mobile devices */
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for tablets */
+}
+
+@media screen and (min-width: 1025px) {
+    /* Styles for desktop */
+}
+
+/* Flexbox and Grid */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Default background image for smaller screens */
+.hero-section {
+    background-image: url('images/background-small.jpg'); /* Assuming you have a small version */
+    background-size: cover;
+    background-position: center;
+    color: #C9CAB8;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .hero-section {
+        background-image: url('images/background-medium.jpg');
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    .hero-section {
+        background-image: url('images/background-large.jpg');
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    .hero-section {
+        background-image: url('images/background-extra-large.jpg');
+    }
+}
+
+.logo-container {
+    background-image: url('images/logo.svg');
+    background-size: contain; /* or 'cover' depending on your needs */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px; /* Adjust to the size you need */
+    height: 100px; /* Adjust to the size you need */
+}
+
+.features-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background-color: inherit;
+    /* Additional styles if needed */
+}
+
+.feature {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+    background-image: url('images/flourish.png'), url('images/background-small.jpg');
+    background-repeat: no-repeat;
+    background-position: center; /* Adjust as needed */
+    /* Other styling */
+}
+
+.feature:hover {
+    transform: translateY(-5px); /* Moves the feature upwards */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Adds shadow for floating effect */
+}
+
+.feature::before {
+    content: '★';
+    color: gold;
+    /* Additional styling for the pseudo-element */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .feature {
+        background-image: url('images/flourish.png'), url('images/background-medium.jpg');
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .feature {
+        background-image: url('images/flourish.png'), url('images/background-large.jpg');
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .feature {
+        background-image: url('images/flourish.png'), url('images/background-extra-large.jpg');
+    }
+}
+
+a:hover {
+    color: blue;
+}
+
+/* Image Handling and Optimization */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Cascading and Specificity */
+button {
+    background-color: #6194AC;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Alternatively, for a 'floating' effect */
+button:hover {
+    background-color: #3B606D;
+    transform: translateY(-3px); /* Moves the button upwards */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds shadow for floating effect */
+}
+
+
+/* Inheritance and Reusability */
+.container {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Flourish implementation */
+.flourish {
+    position: absolute;
+    z-index: 1; /* Behind the text but over the background */
+    opacity: 0.5;
+    /* Additional styles for the flourish */
+}
+
+
+/* Additional styling as needed */
+
+.about-section {
+    background-image: url('images/image-small.png'); /* Default image for smaller screens */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image in the section */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .about-section {
+        background-image: url('images/image-medium.png');
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .about-section {
+        background-image: url('images/image-large.png');
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .about-section {
+        background-image: url('images/image-extra-large.png');
+    }
+}
